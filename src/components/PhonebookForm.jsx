@@ -2,12 +2,9 @@ import { useState } from "react";
 import {FormTotal, InputField,InputButton} from './PhonebookStyled'
 
 
-export default function PhonebookForm(onSubmit) {
+export default function PhonebookForm({ onSubmit }) {
     const [name, setName] = useState('')
     const [number, setNumber] = useState('')
-    
-    
-    
     
     const handleInput = (e) => {
         switch (e.target.name) {
@@ -24,15 +21,11 @@ export default function PhonebookForm(onSubmit) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit({ name, number });
+        onSubmit(name, number);
         setName('');
         setNumber('');
     }
 
-
-    
-        // const { handleInput, handleSubmit } = this;
-        
         return (
                 <FormTotal onSubmit={handleSubmit}>
                 

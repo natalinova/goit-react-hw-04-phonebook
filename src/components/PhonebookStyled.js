@@ -24,6 +24,11 @@ padding-bottom:10px;
 justify-content: space-between;
 width: 90%;
 `
+export const Row = styled.span`
+width:200px;
+text-align: start;
+`
+
 export const InputField = styled.input`
 background-color:#ffd56f;
 border-radius: 5px;

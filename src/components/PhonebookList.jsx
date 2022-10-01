@@ -1,10 +1,10 @@
-import {ListItem, Button} from './PhonebookStyled'
+import {ListItem, Button, Row} from './PhonebookStyled'
 export default function PhonebookList({ data, removeContacts }) {
 
     const list = data.map(({ id, name, number }) => {
         return <ListItem key={id}>
-            <span>Name: {name}</span>
-            <span>Phone: {number}</span>
+            <Row>Name: {name}</Row>
+            <Row>Phone: {number}</Row>
             <span><Button onClick={() => removeContacts(id)}> Remove</Button></span>
         </ListItem>;   
     })
